@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
     public List<User> get() {
-		final String baseUrl = "http://localhost:8041/";
+		final String baseUrl = "http://backend-clusterip-service/";
 		final ResponseEntity<List<User>> fetchedUsers = restTemplate.exchange(baseUrl, HttpMethod.GET, null,
 				new ParameterizedTypeReference<List<User>>() {
 				});
